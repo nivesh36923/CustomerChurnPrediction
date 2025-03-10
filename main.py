@@ -47,8 +47,8 @@ xgb_clf = XGBClassifier(
 xgb_clf.fit(X_train, y_train)
 st.info('process done')
 
-array = df.to_numpy()
-st.selectbox('select a the State',dfcopy['State'])
+
+st.selectbox('**Select State**',dfcopy['State'])
 
 
 
