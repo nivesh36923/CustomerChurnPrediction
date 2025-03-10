@@ -24,5 +24,29 @@ with st.expander('Data'):
 df['State'] = le.fit_transform(df['State'])
 
 
-with st.expander('Data'):
-  df
+X = df[[
+    'Account length','Area code','Total day minutes','Total day calls', 'Total day charge',
+    'Total eve minutes','Total eve calls', 'Total eve charge', 'Total night minutes',
+    'Total night calls', 'Total night charge', 'Customer service calls'
+]]
+
+y = df['Churn']
+X_train,X_test,y_train,y_test = train_test_split(X, y, test_size=0.2)
+
+from xgboost import XGBClassifier
+
+
+xgb_clf = XGBClassifier(
+    objective='binary:logistic',
+    eval_metric='logloss',
+    use_label_encoder=False
+)
+
+
+xgb_clf.fit(X_train, y_train)
+
+y_pred = xgb_clf.predict(X_test)
+
+
+st.info("Accuracy:", accuracy_score(y_test, y_pred))
+st.info(classification_report(y_test, y_pred))
