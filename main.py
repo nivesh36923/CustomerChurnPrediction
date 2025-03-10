@@ -16,6 +16,7 @@ df_20 = pd.read_csv('https://raw.githubusercontent.com/nivesh36923/CustomerChurn
 df_80 = pd.read_csv('https://raw.githubusercontent.com/nivesh36923/CustomerChurnPrediction/master/churn-bigml-80.csv')
 
 df = pd.concat([df_20,df_80])
+dfcopy = df.copy()
 le = LabelEncoder()
 df = df.reset_index()
 
@@ -46,7 +47,8 @@ xgb_clf = XGBClassifier(
 xgb_clf.fit(X_train, y_train)
 st.info('process done')
 
-st.selectbox('select a the State',df['State'])
+array = df.to_numpy()
+st.selectbox('select a the State',dfcopy['State'])
 
 
 
