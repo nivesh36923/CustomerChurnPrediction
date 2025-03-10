@@ -51,7 +51,7 @@ st.info('process done')
 st.selectbox('**Select State**',dfcopy['State'])
 number = st.number_input("**Enter an integer:**", min_value=0, max_value=100, value=10, step=1)
 
-print(number)
+st.write(number)
 
 
 
