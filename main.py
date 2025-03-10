@@ -33,17 +33,17 @@ X = df[[
 y = df['Churn']
 X_train,X_test,y_train,y_test = train_test_split(X, y, test_size=0.2)
 
-from xgboost import XGBClassifier
+# from xgboost import XGBClassifier
 
 
-xgb_clf = XGBClassifier(
-    objective='binary:logistic',
-    eval_metric='logloss',
-    use_label_encoder=False
-)
+# xgb_clf = XGBClassifier(
+#     objective='binary:logistic',
+#     eval_metric='logloss',
+#     use_label_encoder=False
+# )
 
 
-xgb_clf.fit(X_train, y_train)
+# xgb_clf.fit(X_train, y_train)
 st.info('process done')
 
 # joblib.dump(xgb_model, "xgboost_model.joblib")
