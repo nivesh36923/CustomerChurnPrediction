@@ -46,7 +46,7 @@ xgb_clf = XGBClassifier(
 xgb_clf.fit(X_train, y_train)
 st.info('process done')
 
-joblib.dump(xgb_clf, "xgboost_model.joblib")
+st.selectbox('select a the State',df['State'])
 
 
 
