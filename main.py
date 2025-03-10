@@ -44,8 +44,9 @@ xgb_clf = XGBClassifier(
 
 
 xgb_clf.fit(X_train, y_train)
+st.info('process done')
 
-joblib.dump(xgb_model, "xgboost_model.joblib")
+# joblib.dump(xgb_model, "xgboost_model.joblib")
 
 
 
