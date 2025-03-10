@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 import xgboost as xgb
 from sklearn.metrics import accuracy_score, classification_report
-
+import joblib
 
 st.title('Customer Churn Prediction')
 st.write('Hello world!')
@@ -45,8 +45,7 @@ xgb_clf = XGBClassifier(
 
 xgb_clf.fit(X_train, y_train)
 
-y_pred = xgb_clf.predict(X_test)
+joblib.dump(xgb_model, "xgboost_model.joblib")
 
 
-st.info("Accuracy:", accuracy_score(y_test, y_pred))
-st.info(classification_report(y_test, y_pred))
+
