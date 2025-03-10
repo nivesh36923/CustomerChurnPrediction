@@ -74,7 +74,7 @@ if st.session_state.phase == 1:
          'Total eve calls' : Total_eve_calls, 'Total eve charge' : Total_eve_charge , 'Total night minutes' : Total_night_minutes  ,
          'Total night calls' : Total_night_calls, 'Total night charge' : Total_night_charge,
                'Customer service calls' : Customer_service_calls}
-  df_user_test = pd.DataFrame(user_test)
+  df_user_test = pd.DataFrame(user_test, index = [0])
 
 
     
