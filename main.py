@@ -23,5 +23,6 @@ with st.expander('Data'):
   df
 df['State'] = le.fit_transform(df['State'])
 
+
 with st.expander('Data'):
   df
