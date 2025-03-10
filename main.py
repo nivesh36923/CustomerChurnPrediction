@@ -78,10 +78,10 @@ if st.session_state.phase == 1:
 
 
     
-    if st.button("Proceed to Phase 2"):
-        st.session_state.user_input = user_input
-        st.session_state.phase = 2  # Move to Phase 2
-        st.experimental_rerun()
+if st.button("Proceed to Phase 2"):
+  st.session_state.user_input = user_input
+  st.session_state.phase = 2  # Move to Phase 2
+  st.experimental_rerun()
 
 # Step 2: Apply Model (Phase 2)
 elif st.session_state.phase == 2:
