@@ -49,9 +49,9 @@ st.info('process done')
 
 
 st.selectbox('**Select State**',dfcopy['State'])
-number = st.number_input("**Enter an integer:**", min_value=0, max_value=100, value=10, step=1)
+number = st.number_input("**Enter an integer:**", value=3.452)
 
-st.markdown(f"<h1 style='text-align: center; color: blue;'>{number}</h1>", unsafe_allow_html=True)
+st.write(number)
 
 
 
