@@ -56,11 +56,24 @@ Total_day_calls = st.number_input("**Total day calls:**", value=3.452)
 Total_day_charge = st.number_input("**Total day charge:**", value=3.452)
 Total_eve_minutes = st.number_input("**Total eve minutes:**", value=3.452)
 Total_eve_calls = st.number_input("**Total eve calls:**", value=3.452)
+Total_eve_charge = st.number_input("**Total eve calls:**", value=3.452)
 Total_night_minutes = st.number_input("**Total night minutes:**", value=3.452)
 Total_night_calls = st.number_input("**Total night calls:**", value=3.452)
 Total_night_charge = st.number_input("**Total night charge:**", value=3.452)
 Customer_service_calls = st.number_input("**TCustomer service calls:**", value=3.452)
 
+
+user_test = {'Account length' : Account_length , 'Area code' : Area_code,
+          'Total day minutes' : Total_day_minutes ,'Total day calls' : Total_day_calls , 
+             'Total day charge' : Total_day_charge,
+        'Total eve minutes' : Total_eve_minutes ,
+       'Total eve calls' : Total_eve_calls, 'Total eve charge' : Total_eve_charge , 'Total night minutes' : Total_night_minutes  ,
+       'Total night calls' : Total_night_calls, 'Total night charge' : Total_night_charge,
+             'Customer service calls' : Customer_service_calls}
+
+y_pred = xgb_clf.predict(user_test)
+
+st.write(y_pred)
 
 
 
