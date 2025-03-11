@@ -6,7 +6,7 @@ st.title('Customer Churn Predictor')
 st.write('**fil the data**')
 
 Account_length = st.number_input("**Account length:**", value=3.452)
-Area_code = st.number_input("Area code**", value=3.452)
+Area_code = st.number_input("**Area code**", value=3.452)
 Total_day_minutes = st.number_input("**Total day minutes:**", value=3.452)
 Total_day_calls = st.number_input("**Total day calls:**", value=3.452)
 Total_day_charge = st.number_input("**Total day charge:**", value=3.452)
