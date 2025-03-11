@@ -17,7 +17,7 @@ Total_night_minutes = st.number_input("**Total night minutes:**", value=3.452)
 Total_night_calls = st.number_input("**Total night calls:**", value=3.452)
 Total_night_charge = st.number_input("**Total night charge:**", value=3.452)
 Customer_service_calls = st.number_input("**TCustomer service calls:**", value=3.452)
-agree = checkbox('Tick')
+agree = st.checkbox('Tick')
 if agree == True:
   st.write('welcome')
 
