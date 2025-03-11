@@ -1,6 +1,7 @@
 import streamlit as st
 import pandas as pd
 import joblib
+import numpy as np
 st.title('Customer Churn Predictor')
 
 st.write('**fil the data**')
