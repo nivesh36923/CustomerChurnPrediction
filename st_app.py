@@ -12,8 +12,9 @@ st.title('Customer Churn Predictor')
 
 st.write('**fil the data**')
 
-loaded_model = joblib.load("xgboost_model.joblib")
 
+loaded_model = xgb.XGBClassifier()
+loaded_model.load_model("xgboost_model.json")
 
 
 Account_length = st.number_input("**Account length:**", value=3.452)
