@@ -1,7 +1,13 @@
 import streamlit as st
-import pandas as pd
-import joblib
+import pandas as pd 
 import numpy as np
+import sklearn
+from sklearn.model_selection import train_test_split
+from sklearn.preprocessing import LabelEncoder
+import xgboost as xgb
+from sklearn.metrics import accuracy_score, classification_report
+import joblib
+
 st.title('Customer Churn Predictor')
 
 st.write('**fil the data**')
