@@ -14,7 +14,7 @@ st.write('**fil the data**')
 
 
 loaded_model = xgb.XGBClassifier()
-loaded_model.load_model("xgboost_model.json")
+loaded_model.load_model("xgb_model_save.json")
 
 
 Account_length = st.number_input("**Account length:**", value=3.452)
