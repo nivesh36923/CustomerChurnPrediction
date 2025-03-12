@@ -37,7 +37,8 @@ if agree == True:
 
   if st.button("Submit"):
     X = np.array([Account_length,Area_code,Total_day_minutes,Total_day_calls,Total_day_charge,Total_eve_minutes,Total_eve_calls,Total_eve_charge,Total_night_minutes,Total_night_calls,Total_night_charge,Customer_service_calls])
-    X_test = X.reshape(1, -1)
+    x_test = X.reshape(1, -1)
+    X_test = pd.DataFrame( x_test)
     y_pred = loaded_model.predict(X_test)
     
     st.write('y_pred : ',y_pred)
